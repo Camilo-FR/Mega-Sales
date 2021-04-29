@@ -1,0 +1,355 @@
+/* CSS de : Mega Sales by Steve Piquet
+Date : 12/03
+Version : 1.0 */
+/************/
+/* GENERAL */
+/************/
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow+Condensed:wght@300;400&family=Bebas+Neue&family=Montserrat:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  color: #343434;
+  background: rgb(229, 229, 229);
+  background: linear-gradient(
+    335deg,
+    rgba(229, 229, 229, 1) 0%,
+    rgba(247, 247, 247, 1) 100%
+  );
+  min-height: 100vh;
+}
+
+/************/
+/* HEADER */
+/************/
+.burger {
+  display: none;
+}
+
+nav#pc {
+  display: flex;
+  justify-content: center;
+}
+
+nav#pc ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+  width: 50%;
+  align-items: baseline;
+  margin-top: 40px;
+}
+
+nav#pc ul li {
+  padding: 10px;
+}
+
+nav#pc ul li a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4em;
+  font-weight: 300;
+  color: #343434;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+nav#pc ul li a:hover {
+  color: #ff9391;
+}
+
+nav#pc ul li a img {
+  height: 27px;
+  width: 27px;
+}
+
+nav#pc input[type="checkbox"] {
+  display: none;
+}
+
+nav#pc label {
+  padding: 10px;
+}
+
+.logo {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2.4em;
+  letter-spacing: 0.15em;
+}
+
+/************/
+/* MAIN CONTENT */
+/************/
+main {
+  margin-top: 80px;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.img-container {
+  width: 60%;
+}
+
+.container .img-container img {
+  width: 100%;
+  height: auto;
+  max-width: 700px;
+}
+
+.content {
+  width: 40%;
+  padding-top: 180px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+.content h1 {
+  font-family: "Archivo Black", sans-serif;
+  color: #ff9391;
+  font-size: 3em;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 0.9;
+  transform: scale(1, 1.2);
+  transform-origin: bottom left;
+}
+
+.content h2 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 2.3em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+}
+
+.content p {
+  padding-bottom: 20px;
+}
+
+.content > p:nth-child(4) {
+  margin-bottom: 15px;
+}
+
+.jaune {
+  font-family: "Archivo Black", sans-serif;
+  color: #ffdf78;
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.content button {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 35px;
+  text-decoration: none;
+  padding: 10px 25px;
+  box-shadow: 4px 3px 9px 0px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  font-size: 1.4em;
+  color: #ff9391;
+  margin: 0 auto;
+  display: table;
+  transition: all 0.3s ease-in-out;
+}
+
+.content button:hover {
+  background-color: #ff9391;
+  color: #fff;
+  box-shadow: 4px 3px 9px 0px rgba(142, 20, 20, 0.2s);
+}
+
+/************/
+/* FOOTER */
+/************/
+
+footer {
+  margin-bottom: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+p.footer {
+  font-size: 0.8em;
+  color: #343434;
+  text-align: center;
+}
+
+/*********************************/
+/* RESPONSIVE - Medium Desktop */
+/********************************/
+
+@media screen and (max-width: 1440px) {
+  nav#pc {
+    width: 80%;
+  }
+  .container {
+    padding: 0 5%;
+  }
+  .content {
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 1140px) {
+  .content {
+    padding-top: 20px;
+  }
+}
+
+/*************************/
+/* RESPONSIVE - Tablette*/
+/************************/
+
+@media screen and (max-width: 768px) {
+  /* Menu Burger */
+  nav#pc {
+    display: none;
+  }
+
+  .show {
+    display: flex;
+  }
+
+  .icon-burger {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ff9391;
+    position: absolute;
+    top: 1rem;
+    z-index: 2;
+  }
+
+  nav.burger {
+    padding: 20px;
+    background-color: #ffdf78;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 22%;
+    position: relative;
+    animation: 0.5s;
+  }
+
+  nav.burger ul {
+    list-style-type: none;
+  }
+
+  nav.burger ul li a {
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3em;
+    font-weight: 300;
+    color: #343434;
+  }
+
+  main {
+    margin-top: 30px;
+  }
+  .container {
+    width: 100%;
+    flex-direction: column;
+    padding: 0 50px;
+  }
+  .img-container {
+    width: 90%;
+  }
+  .content {
+    width: 100%;
+    padding-top: 10px;
+    margin-left: 0;
+  }
+  nav#pc ul {
+    width: 100%;
+  }
+  .content h1,
+  .content h2 {
+    text-align: center;
+  }
+  footer {
+    position: unset;
+  }
+}
+
+/*************************/
+/* RESPONSIVE - Mobile*/
+/************************/
+
+@media screen and (max-width: 380px) {
+  /* Menu Burger */
+  nav#pc {
+    display: none;
+  }
+
+  .show {
+    display: flex;
+  }
+
+  .icon-burger {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ff9391;
+    position: absolute;
+    top: 0.2rem;
+    z-index: 2;
+  }
+
+  nav.burger {
+    padding: 15px;
+    background-color: #ffdf78;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 22%;
+    position: relative;
+    animation: 0.5s;
+  }
+
+  nav.burger ul {
+    list-style-type: none;
+  }
+
+  nav.burger ul li a {
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3em;
+    font-weight: 300;
+    color: #343434;
+  }
+
+  /* Main */
+  .container {
+    padding: 0 30px;
+  }
+  .img-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .container img {
+    margin-left: -15px;
+  }
+  nav#pc ul li a {
+    font-size: 1em;
+  }
+  .content p {
+    text-align: justify;
+  }
+}
