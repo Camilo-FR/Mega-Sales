@@ -28,6 +28,10 @@ body {
 /************/
 /* HEADER */
 /************/
+.icon-burger {
+  display: none;
+}
+
 .burger {
   display: none;
 }
@@ -220,7 +224,9 @@ p.footer {
   nav#pc {
     display: none;
   }
-
+  .icon-burger {
+    display: block;
+  }
   .show {
     display: flex;
   }
