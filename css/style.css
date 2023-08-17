@@ -22,7 +22,7 @@ body {
     rgba(229, 229, 229, 1) 0%,
     rgba(247, 247, 247, 1) 100%
   );
-  min-height: 100vh;
+  height: 100vh;
 }
 
 /************/
@@ -48,7 +48,7 @@ nav#pc ul {
   list-style: none;
   width: 50%;
   align-items: baseline;
-  margin-top: 40px;
+  margin-top: 1rem;
 }
 
 nav#pc ul li {
@@ -114,7 +114,6 @@ main {
 
 .content {
   width: 40%;
-  padding-top: 180px;
   margin-left: 50px;
   margin-bottom: 50px;
 }
@@ -205,9 +204,10 @@ p.footer {
   .container {
     padding: 0 5%;
   }
-  .content {
-    padding-top: 100px;
-  }
+}
+
+.img-container {
+  width: 50%;
 }
 @media screen and (max-width: 1140px) {
   .content {
